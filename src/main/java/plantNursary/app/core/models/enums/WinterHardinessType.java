@@ -1,4 +1,4 @@
-package plantNursary.app.core.model.enums;
+package plantNursary.app.core.models.enums;
 
 public enum WinterHardinessType {
     // высокая
