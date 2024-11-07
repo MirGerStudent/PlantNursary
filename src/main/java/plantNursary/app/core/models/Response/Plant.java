@@ -4,14 +4,13 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
-import java.util.UUID;
 
 @Getter
 @Setter
 @EqualsAndHashCode
 @ToString
 public class Plant {
-    private UUID uuid;
+    private Long id;
     private String plantType;
     private String name;
     private Float height;
@@ -21,8 +20,9 @@ public class Plant {
     private String groundType;
     private String peculiarities;
 
-    public Plant(String plantType, String name, Float height, Float diameter, String hardinessType, String placeType, String groundType, String peculiarities) {
-        this.uuid = UUID.randomUUID();
+    public Plant(Long id, String plantType, String name, Float height, Float diameter, String hardinessType, String placeType,
+            String groundType, String peculiarities) {
+        this.id = id;
         this.plantType = plantType;
         this.name = name;
         this.height = height;

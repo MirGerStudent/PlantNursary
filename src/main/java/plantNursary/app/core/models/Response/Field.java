@@ -7,25 +7,24 @@ import lombok.ToString;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.UUID;
 
 @Getter
 @Setter
 @EqualsAndHashCode
 @ToString
 public class Field {
-    private final UUID uuid;
+    private Long id;
     private List<Sector> sectors;
     private String name;
 
-    public Field(List<Sector> sectors, String name) {
-        this.uuid = UUID.randomUUID();
+    public Field(Long id , List<Sector> sectors, String name) {
+        this.id = id;
         this.sectors = sectors;
         this.name = name;
     }
 
-    public Field() {
-        this.uuid = UUID.randomUUID();
+    public Field(Long id) {
+        this.id = id;
         this.sectors = new ArrayList<>();
         this.name = "Поле";
     }

@@ -6,22 +6,22 @@ import lombok.Setter;
 import lombok.ToString;
 
 import java.util.List;
-import java.util.UUID;
 
 @Getter
 @Setter
 @EqualsAndHashCode
 @ToString
 public class Nursary {
-    private UUID uuid;
+    private Long id;
     private List<Field> fields;
     private List<QueenCell> queenCells;
     private List<BreedingSector> breedingSectors;
     private List<GreenHouse> greenHouses;
     private String name;
 
-    public Nursary(List<Field> fields, List<QueenCell> queenCells, List<BreedingSector> breedingSectors, List<GreenHouse> greenHouses, String name) {
-        this.uuid = UUID.randomUUID();
+    public Nursary(Long id, List<Field> fields, List<QueenCell> queenCells, List<BreedingSector> breedingSectors,
+            List<GreenHouse> greenHouses, String name) {
+        this.id = id;
         this.fields = fields;
         this.queenCells = queenCells;
         this.breedingSectors = breedingSectors;

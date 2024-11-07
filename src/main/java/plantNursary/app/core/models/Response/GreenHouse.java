@@ -7,25 +7,24 @@ import lombok.ToString;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.UUID;
 
 @Getter
 @Setter
 @EqualsAndHashCode
 @ToString
 public class GreenHouse {
-    private final UUID uuid;
+    private final Long id;
     private List<Plant> plants;
     private String name;
 
-    public GreenHouse(List<Plant> plants, String name) {
-        this.uuid = UUID.randomUUID();
+    public GreenHouse(Long id, List<Plant> plants, String name) {
+        this.id = id;
         this.plants = plants;
         this.name = name;
     }
 
-    public GreenHouse() {
-        this.uuid = UUID.randomUUID();
+    public GreenHouse(long id) {
+        this.id = id;
         this.plants = new ArrayList<>();
         this.name = "Теплица";
     }
