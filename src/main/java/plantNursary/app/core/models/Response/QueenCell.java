@@ -1,4 +1,4 @@
-package plantNursary.app.core.models;
+package plantNursary.app.core.models.Response;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -7,7 +7,6 @@ import lombok.ToString;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 import java.util.UUID;
 
 @Getter

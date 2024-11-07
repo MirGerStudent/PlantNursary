@@ -14,18 +14,15 @@ import java.util.UUID;
 @EqualsAndHashCode
 @ToString
 public class Field {
-    private final UUID uuid;
     private List<Sector> sectors;
     private String name;
 
     public Field(List<Sector> sectors, String name) {
-        this.uuid = UUID.randomUUID();
         this.sectors = sectors;
         this.name = name;
     }
 
     public Field() {
-        this.uuid = UUID.randomUUID();
         this.sectors = new ArrayList<>();
         this.name = "Поле";
     }

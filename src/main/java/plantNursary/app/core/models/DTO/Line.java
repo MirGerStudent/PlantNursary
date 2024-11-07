@@ -16,7 +16,6 @@ import java.util.UUID;
 @EqualsAndHashCode
 @ToString
 public class Line {
-    private UUID uuid;
     private Plant plant;
     private Integer countOfPlants;
     private Date dateOfPlanting;
@@ -24,7 +23,6 @@ public class Line {
     private String name;
 
     public Line(Plant plant, Integer countOfPlants, Date dateOfPlanting, List<EventType> events, String name) {
-        this.uuid = UUID.randomUUID();
         this.plant = plant;
         this.countOfPlants = countOfPlants;
         this.dateOfPlanting = dateOfPlanting;
@@ -33,7 +31,6 @@ public class Line {
     }
 
     public Line(Plant plant, Integer countOfPlants) {
-        this.uuid = UUID.randomUUID();
         this.dateOfPlanting = new Date();
         this.events = new ArrayList<>();
         this.name = "Грядка";

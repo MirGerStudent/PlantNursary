@@ -4,30 +4,23 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
-import plantNursary.app.core.models.enums.GroundType;
-import plantNursary.app.core.models.enums.PlaceType;
-import plantNursary.app.core.models.enums.PlantType;
-import plantNursary.app.core.models.enums.WinterHardinessType;
-
-import java.util.UUID;
 
 @Getter
 @Setter
 @EqualsAndHashCode
 @ToString
 public class Plant {
-    private UUID uuid;
-    private PlantType plantType;
+    private String plantType;
     private String name;
     private Float height;
     private Float diameter;
-    private WinterHardinessType hardinessType;
-    private PlaceType placeType;
-    private GroundType groundType;
+    private String hardinessType;
+    private String placeType;
+    private String groundType;
     private String peculiarities;
 
-    public Plant(PlantType plantType, String name, Float height, Float diameter, WinterHardinessType hardinessType, PlaceType placeType, GroundType groundType, String peculiarities) {
-        this.uuid = UUID.randomUUID();
+    public Plant(String plantType, String name, Float height, Float diameter, String hardinessType, String placeType,
+            String groundType, String peculiarities) {
         this.plantType = plantType;
         this.name = name;
         this.height = height;

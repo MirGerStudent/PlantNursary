@@ -1,4 +1,4 @@
-package plantNursary.app.core.models;
+package plantNursary.app.core.models.Response;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -6,7 +6,6 @@ import lombok.Setter;
 import lombok.ToString;
 
 import java.util.List;
-import java.util.Objects;
 import java.util.UUID;
 
 @Getter
@@ -22,6 +21,7 @@ public class Nursary {
     private String name;
 
     public Nursary(List<Field> fields, List<QueenCell> queenCells, List<BreedingSector> breedingSectors, List<GreenHouse> greenHouses, String name) {
+        this.uuid = UUID.randomUUID();
         this.fields = fields;
         this.queenCells = queenCells;
         this.breedingSectors = breedingSectors;

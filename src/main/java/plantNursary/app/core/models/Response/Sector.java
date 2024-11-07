@@ -1,4 +1,4 @@
-package plantNursary.app.core.models;
+package plantNursary.app.core.models.Response;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;

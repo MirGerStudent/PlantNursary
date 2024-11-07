@@ -13,7 +13,6 @@ import java.util.UUID;
 @EqualsAndHashCode
 @ToString
 public class Nursary {
-    private UUID uuid;
     private List<Field> fields;
     private List<QueenCell> queenCells;
     private List<BreedingSector> breedingSectors;

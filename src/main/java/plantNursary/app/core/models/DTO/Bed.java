@@ -14,18 +14,15 @@ import java.util.UUID;
 @EqualsAndHashCode
 @ToString
 public class Bed {
-    private final UUID uuid;
     private List<Plant> plants;
     private String name;
 
     public Bed(List<Plant> plants, String name) {
-        this.uuid = UUID.randomUUID();
         this.plants = plants;
         this.name = name;
     }
 
     public Bed() {
-        this.uuid = UUID.randomUUID();
         this.plants = new ArrayList<>();
         this.name = "Клумба";
     }
