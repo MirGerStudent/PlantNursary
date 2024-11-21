@@ -11,8 +11,8 @@ import lombok.ToString;
 @ToString
 public class Plant {
     private Long id;
-    private String plantType;
     private String name;
+    private String plantType;
     private Float height;
     private Float diameter;
     private String hardinessType;
@@ -20,11 +20,11 @@ public class Plant {
     private String groundType;
     private String peculiarities;
 
-    public Plant(Long id, String plantType, String name, Float height, Float diameter, String hardinessType, String placeType,
-            String groundType, String peculiarities) {
+    public Plant(Long id, String name, String plantType, Float height, Float diameter, String hardinessType,
+            String placeType, String groundType, String peculiarities) {
         this.id = id;
-        this.plantType = plantType;
         this.name = name;
+        this.plantType = plantType;
         this.height = height;
         this.diameter = diameter;
         this.hardinessType = hardinessType;

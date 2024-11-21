@@ -14,18 +14,18 @@ import java.util.List;
 @ToString
 public class GreenHouse {
     private final Long id;
-    private List<Plant> plants;
     private String name;
+    private List<Plant> plants;
 
-    public GreenHouse(Long id, List<Plant> plants, String name) {
+    public GreenHouse(Long id, String name, List<Plant> plants) {
         this.id = id;
-        this.plants = plants;
         this.name = name;
+        this.plants = plants;
     }
 
     public GreenHouse(long id) {
         this.id = id;
-        this.plants = new ArrayList<>();
         this.name = "Теплица";
+        this.plants = new ArrayList<>();
     }
 }

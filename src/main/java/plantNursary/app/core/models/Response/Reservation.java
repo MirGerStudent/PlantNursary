@@ -7,7 +7,6 @@ import lombok.ToString;
 
 import java.util.Date;
 import java.util.HashMap;
-import java.util.UUID;
 
 @Getter
 @Setter
@@ -15,11 +14,11 @@ import java.util.UUID;
 @ToString
 public class Reservation {
     private Long id;
-    private HashMap<Line, UUID> reservationList;
-    private Date date;
     private String name;
+    private HashMap<Line, Long> reservationList;
+    private Date date;
 
-    public Reservation(Long id, HashMap<Line, UUID> reservationList, Date date, String name) {
+    public Reservation(Long id, HashMap<Line, Long> reservationList, Date date, String name) {
         this.id = id;
         this.reservationList = reservationList;
         this.date = date;

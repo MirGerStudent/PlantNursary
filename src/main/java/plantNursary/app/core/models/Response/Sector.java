@@ -14,18 +14,18 @@ import java.util.List;
 @ToString
 public class Sector {
     private Long id;
-    private List<Line> lines;
     private String name;
+    private List<Line> lines;
 
-    public Sector(Long id, List<Line> lines, String name) {
+    public Sector(Long id, String name, List<Line> lines) {
         this.id = id;
-        this.lines = lines;
         this.name = name;
+        this.lines = lines;
     }
 
     public Sector(Long id) {
         this.id = id;
-        this.lines = new ArrayList<>();
         this.name = "Сектор";
+        this.lines = new ArrayList<>();
     }
 }

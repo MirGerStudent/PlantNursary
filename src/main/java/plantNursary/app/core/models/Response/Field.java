@@ -14,18 +14,18 @@ import java.util.List;
 @ToString
 public class Field {
     private Long id;
-    private List<Sector> sectors;
     private String name;
+    private List<Sector> sectors;
 
-    public Field(Long id , List<Sector> sectors, String name) {
+    public Field(Long id, String name, List<Sector> sectors) {
         this.id = id;
-        this.sectors = sectors;
         this.name = name;
+        this.sectors = sectors;
     }
 
     public Field(Long id) {
         this.id = id;
-        this.sectors = new ArrayList<>();
         this.name = "Поле";
+        this.sectors = new ArrayList<>();
     }
 }

@@ -14,18 +14,18 @@ import java.util.List;
 @ToString
 public class Bed {
     private Long id;
-    private List<Plant> plants;
     private String name;
+    private List<Plant> plants;
 
-    public Bed(Long id, List<Plant> plants, String name) {
+    public Bed(Long id, String name, List<Plant> plants) {
         this.id = id;
-        this.plants = plants;
         this.name = name;
+        this.plants = plants;
     }
 
     public Bed() {
         this.id = 0L;
-        this.plants = new ArrayList<>();
         this.name = "Клумба";
+        this.plants = new ArrayList<>();
     }
 }

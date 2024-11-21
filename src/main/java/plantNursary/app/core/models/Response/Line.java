@@ -14,25 +14,25 @@ import java.util.*;
 @ToString
 public class Line {
     private Long id;
+    private String name;
     private Plant plant;
     private Integer countOfPlants;
     private Date dateOfPlanting;
     private List<EventType> events;
-    private String name;
 
-    public Line(Long id, Plant plant, Integer countOfPlants, Date dateOfPlanting, List<EventType> events, String name) {
+    public Line(Long id, String name, Plant plant, Integer countOfPlants, Date dateOfPlanting, List<EventType> events) {
         this.id = id;
+        this.name = name;
         this.plant = plant;
         this.countOfPlants = countOfPlants;
         this.dateOfPlanting = dateOfPlanting;
         this.events = events;
-        this.name = name;
     }
 
     public Line(Long id, Plant plant, Integer countOfPlants) {
         this.id = id;
+        this.name = "Грядка";
         this.dateOfPlanting = new Date();
         this.events = new ArrayList<>();
-        this.name = "Грядка";
     }
 }
