@@ -5,8 +5,9 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
+import java.util.ArrayList;
 import java.util.Date;
-import java.util.HashMap;
+import java.util.List;
 
 @Getter
 @Setter
@@ -15,10 +16,10 @@ import java.util.HashMap;
 public class Reservation {
     private Long id;
     private String name;
-    private HashMap<Line, Long> reservationList;
+    private List<Line> reservationList;
     private Date date;
 
-    public Reservation(Long id, HashMap<Line, Long> reservationList, Date date, String name) {
+    public Reservation(Long id, List<Line> reservationList, Date date, String name) {
         this.id = id;
         this.reservationList = reservationList;
         this.date = date;
@@ -27,7 +28,7 @@ public class Reservation {
 
     public Reservation(Long id) {
         this.id = id;
-        this.reservationList = new HashMap<>();
+        this.reservationList = new ArrayList<>();
         this.date = new Date();
         this.name = "Резервация";
     }
